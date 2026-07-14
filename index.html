@@ -3,36 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="精选优质在线工具集合 - 开发、设计、写作、图片处理、文件转换等一站式工具导航，提升工作效率的必备收藏。">
-  <meta name="keywords" content="在线工具,开发工具,设计工具,图片处理,文件转换,程序员工具,导航网站">
-  <meta name="author" content="ToolHub">
+  <meta name="description" content="YxToolHub - 免费在线图片去水印工具，纯本地处理保护隐私，AI 智能去除图片水印，无需上传服务器。">
+  <meta name="keywords" content="图片去水印,在线去水印,AI去水印,YxToolHub,图片处理,watermark remover,remove watermark from image,free online tool">
+  <meta name="author" content="YxToolHub">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://toolhub.example.com/">
+  <link rel="canonical" href="https://guide.yanxv.com/">
 
-  <meta property="og:title" content="ToolHub - 精选在线工具导航">
-  <meta property="og:description" content="精选优质在线工具集合，涵盖开发、设计、写作、图片处理等类别，一站式提升工作效率。">
+  <link rel="alternate" hreflang="zh" href="https://guide.yanxv.com/">
+  <link rel="alternate" hreflang="en" href="https://guide.yanxv.com/">
+  <link rel="alternate" hreflang="x-default" href="https://guide.yanxv.com/">
+
+  <meta property="og:title" content="YxToolHub - 图片去水印 / Image Watermark Remover">
+  <meta property="og:description" content="免费在线图片去水印工具，纯本地处理，AI 智能去除图片水印，隐私安全。Free online image watermark remover, 100% local processing.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://toolhub.example.com/">
+  <meta property="og:url" content="https://guide.yanxv.com/">
   <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ToolHub - 精选在线工具导航">
-  <meta name="twitter:description" content="精选优质在线工具集合，涵盖开发、设计、写作、图片处理等类别，一站式提升工作效率。">
+  <meta name="twitter:title" content="YxToolHub - 图片去水印 / Image Watermark Remover">
+  <meta name="twitter:description" content="免费在线图片去水印工具，纯本地处理，AI 智能去除图片水印。Free online watermark remover, local & private.">
 
-  <title>ToolHub - 精选在线工具导航 | 一站式工具集合</title>
+  <title>YxToolHub - 免费在线图片去水印工具 | AI Watermark Remover Online</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233b82f6'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-family='Arial' font-weight='bold'>Y</text></svg>">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "ToolHub",
-    "url": "https://toolhub.example.com/",
-    "description": "精选优质在线工具集合，涵盖开发、设计、写作、图片处理等类别",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://toolhub.example.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "name": "YxToolHub",
+    "url": "https://guide.yanxv.com/",
+    "description": "免费在线图片去水印工具，纯本地处理，AI 智能去除图片水印",
+    "inLanguage": ["zh-CN", "en"],
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "图片去水印 / Image Watermark Remover",
+      "applicationCategory": "Multimedia",
+      "operatingSystem": "All",
+      "description": "纯本地处理的在线图片去水印工具，保护隐私，免费使用。100% local watermark removal, privacy protected, free to use.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "YxToolHub",
+        "item": "https://guide.yanxv.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "图片去水印 / Image Watermark Remover",
+        "item": "https://watermark-remover.yanxv.com/"
+      }
+    ]
   }
   </script>
 
@@ -74,6 +108,13 @@
       color: var(--text-primary);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
     }
 
     .container {
@@ -143,83 +184,52 @@
       background: var(--accent-light);
     }
 
-    /* ---- Hero ---- */
-    .hero {
-      padding: 80px 0 56px;
-      text-align: center;
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .hero h1 {
-      font-size: 44px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
+    .lang-btn {
+      background: none;
+      border: none;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: all var(--transition);
     }
 
-    .hero h1 span {
+    .lang-btn:hover {
       color: var(--accent);
     }
 
-    .hero p {
-      font-size: 18px;
-      color: var(--text-secondary);
-      max-width: 560px;
-      margin: 0 auto 32px;
+    .lang-btn.active {
+      color: var(--accent);
+      font-weight: 600;
     }
 
-    .search-box {
-      max-width: 520px;
-      margin: 0 auto;
-      position: relative;
+    .lang-divider {
+      color: var(--border);
+      font-size: 13px;
     }
 
-    .search-box input {
-      width: 100%;
-      padding: 14px 20px 14px 48px;
-      font-size: 15px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-card);
-      color: var(--text-primary);
-      outline: none;
-      transition: all var(--transition);
-      font-family: inherit;
+    /* ---- Filter Bar ---- */
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 24px 0 24px;
     }
 
-    .search-box input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
-    }
-
-    .search-box input::placeholder {
-      color: var(--text-muted);
-    }
-
-    .search-box .search-icon {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 18px;
-      pointer-events: none;
-    }
-
-    .search-status {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 14px;
-      color: var(--text-muted);
-      min-height: 22px;
-    }
-
-    /* ---- Categories ---- */
     .categories {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      justify-content: center;
-      margin-bottom: 48px;
     }
 
     .category-btn {
@@ -246,13 +256,45 @@
       border-color: var(--accent);
     }
 
-    /* ---- Tools Grid ---- */
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 24px;
-      color: var(--text-primary);
+    .search-box {
+      max-width: 320px;
+      min-width: 200px;
+      position: relative;
     }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      font-size: 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      outline: none;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    /* ---- Tools Grid ---- */
 
     .tools-grid {
       display: grid;
@@ -345,6 +387,18 @@
     }
 
     /* ---- Back to Top ---- */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .back-to-top {
       position: fixed;
       bottom: 32px;
@@ -376,15 +430,13 @@
 
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 30px; }
-      .hero p { font-size: 16px; }
-      .hero { padding: 48px 0 32px; }
+      .filter-bar { flex-direction: column; align-items: stretch; }
+      .search-box { max-width: 100%; }
       .tools-grid { grid-template-columns: 1fr; }
       nav a { font-size: 13px; padding: 6px 10px; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 26px; }
       .container { padding: 0 16px; }
     }
   </style>
@@ -393,111 +445,151 @@
 
   <header>
     <div class="container">
-      <a href="/" class="logo" aria-label="ToolHub 首页">
-        <span class="logo-icon">T</span>
-        ToolHub
+      <a href="/" class="logo" aria-label="YxToolHub 首页">
+        <span class="logo-icon">Y</span>
+        YxToolHub
       </a>
-      <nav aria-label="主导航">
-        <a href="#tools">全部工具</a>
-        <a href="#categories">分类</a>
-      </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="zh">中文</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-label="网站介绍">
-      <div class="container">
-        <h1>精选 <span>在线工具</span> 导航</h1>
-        <p>发现优质在线工具，提升开发、设计与日常工作效率。每一个都经过精心筛选。</p>
+    <h1 class="sr-only">YxToolHub - 免费在线图片去水印工具</h1>
+
+    <section class="container" id="categories" aria-label="工具分类">
+      <div class="filter-bar">
+        <div class="categories" id="categoryFilters" role="tablist" aria-label="工具分类筛选">
+          <button class="category-btn active" data-category="all" role="tab" aria-selected="true" data-i18n="categoryAll">全部</button>
+        </div>
         <div class="search-box">
           <span class="search-icon" aria-hidden="true">&#128269;</span>
           <input
             type="text"
             id="searchInput"
-            placeholder="搜索工具名称、描述或标签..."
+            placeholder="搜索工具..."
             aria-label="搜索工具"
+            data-i18n-placeholder="searchPlaceholder"
+            data-i18n-aria="searchAria"
             autocomplete="off"
           >
         </div>
-        <div class="search-status" id="searchStatus" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="container" id="categories" aria-label="工具分类">
-      <div class="categories" id="categoryFilters" role="tablist" aria-label="工具分类筛选">
-        <button class="category-btn active" data-category="all" role="tab" aria-selected="true">全部</button>
       </div>
     </section>
 
     <section class="container" id="tools" aria-label="工具列表">
-      <h2 class="section-title" id="sectionTitle">全部工具</h2>
-      <div class="tools-grid" id="toolsGrid" aria-labelledby="sectionTitle"></div>
+      <div class="tools-grid" id="toolsGrid"></div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 ToolHub. 精选在线工具导航 &mdash; 持续收录优质工具。</p>
+      <p>&copy; 2026 YxToolHub. <span data-i18n="footerText">精选工具导航</span> &mdash; <a href="https://guide.yanxv.com/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">guide.yanxv.com</a></p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="返回顶部">&#8593;</button>
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部" data-i18n-aria="backToTop">&#8593;</button>
 
   <script>
-    const toolsData = [
-      // ---- 开发工具 ----
-      { name: 'CodePen', desc: '在线代码编辑器，支持 HTML / CSS / JavaScript 实时预览和分享。', icon: '&#128187;', category: '开发工具', tags: ['代码', '前端', '实时预览'] },
-      { name: 'JSFiddle', desc: '轻量级在线代码测试工具，快速调试 JavaScript 代码片段。', icon: '&#128736;', category: '开发工具', tags: ['JavaScript', '调试', '测试'] },
-      { name: 'Regex101', desc: '强大直观的正则表达式测试工具，支持多语言语法。', icon: '&#9881;', category: '开发工具', tags: ['正则', '调试', '开发'] },
-      { name: 'JSON Formatter', desc: '在线 JSON 格式化、验证与压缩工具。', icon: '&#123;', category: '开发工具', tags: ['JSON', '格式化', '验证'] },
-      { name: 'DevDocs', desc: '开发者 API 文档聚合，离线可用，搜索快速。', icon: '&#128214;', category: '开发工具', tags: ['文档', 'API', '离线'] },
-      { name: 'GitHub', desc: '全球最大的代码托管平台，版本控制与协作开发。', icon: '&#128187;', category: '开发工具', tags: ['代码托管', 'Git', '协作'] },
-      { name: 'StackBlitz', desc: '基于浏览器的 IDE，秒级启动 Angular / React / Vue 项目。', icon: '&#9889;', category: '开发工具', tags: ['IDE', '前端', '在线'] },
-      { name: 'Diff Checker', desc: '在线文本对比工具，精准标识差异行。', icon: '&#8694;', category: '开发工具', tags: ['对比', '文本', 'diff'] },
+    const LANG_KEY = 'yx-lang';
+    let lang = localStorage.getItem(LANG_KEY) || 'zh';
 
-      // ---- 设计工具 ----
-      { name: 'Figma', desc: '协作式 UI 设计工具，多人实时编辑，组件化设计系统。', icon: '&#127912;', category: '设计工具', tags: ['设计', 'UI/UX', '协作'] },
-      { name: 'Coolors', desc: '一键生成配色方案，快速创建调色板并导出。', icon: '&#127752;', category: '设计工具', tags: ['配色', '色彩', '生成'] },
-      { name: 'Remove.bg', desc: 'AI 自动去除图片背景，秒级处理，无需手动抠图。', icon: '&#128247;', category: '设计工具', tags: ['去背景', 'AI', '图片'] },
-      { name: 'Compressor.io', desc: '在线图片压缩，支持 JPEG / PNG / WebP 等格式。', icon: '&#128190;', category: '设计工具', tags: ['压缩', '图片', '优化'] },
-      { name: 'Font Awesome', desc: '最流行的图标库，免费图标资源丰富。', icon: '&#127775;', category: '设计工具', tags: ['图标', '字体', '资源'] },
-      { name: 'Canva', desc: '在线平面设计平台，模板丰富，拖拽式操作。', icon: '&#127912;', category: '设计工具', tags: ['设计', '模板', '平面'] },
+    const i18n = {
+      zh: {
+        categoryAll: '全部',
+        searchPlaceholder: '搜索工具...',
+        searchAria: '搜索工具',
+        noResults: '没有找到匹配的工具，试试其他关键词吧',
+        footerText: '精选工具导航',
+        backToTop: '返回顶部',
+        tools: [
+          { name: '图片去水印', desc: '纯本地处理，隐私防护，免费在线使用', icon: '&#128247;', category: '设计工具', tags: ['去水印', '本地', '隐私'], url: 'https://watermark-remover.yanxv.com/' },
+        ],
+      },
+      en: {
+        categoryAll: 'All',
+        searchPlaceholder: 'Search tools...',
+        searchAria: 'Search tools',
+        noResults: 'No matching tools found, try other keywords',
+        footerText: 'Curated Tools',
+        backToTop: 'Back to top',
+        tools: [
+          { name: 'Image Watermark Remover', desc: '100% local processing, privacy protected, free to use', icon: '&#128247;', category: 'Design Tools', tags: ['Watermark', 'Local', 'Privacy'], url: 'https://watermark-remover.yanxv.com/' },
+        ],
+      },
+    };
 
-      // ---- 写作与内容 ----
-      { name: 'Notion', desc: '全能笔记与知识管理工具，支持数据库、看板、文档协作。', icon: '&#128221;', category: '写作笔记', tags: ['笔记', '文档', '协作'] },
-      { name: 'DeepL', desc: '高质量 AI 翻译工具，比传统翻译更自然准确。', icon: '&#127758;', category: '写作笔记', tags: ['翻译', 'AI', '多语言'] },
-      { name: 'Grammarly', desc: '英文写作助手，实时检查语法、拼写与语气。', icon: '&#9997;', category: '写作笔记', tags: ['语法', '英文', '写作'] },
+    function t(key) {
+      return i18n[lang][key];
+    }
 
-      // ---- 文件转换 ----
-      { name: 'CloudConvert', desc: '支持 200+ 格式的文件在线转换，音视频、文档、图片。', icon: '&#128259;', category: '文件转换', tags: ['转换', '文件', '多格式'] },
-      { name: 'Smallpdf', desc: 'PDF 全能工具：压缩、合并、分割、转换格式。', icon: '&#128196;', category: '文件转换', tags: ['PDF', '转换', '编辑'] },
+    function getToolsData() {
+      return i18n[lang].tools;
+    }
 
-      // ---- 网络与 SEO ----
-      { name: 'PageSpeed', desc: 'Google 官方网页性能分析工具，优化建议详实。', icon: '&#128640;', category: '网络运维', tags: ['性能', 'SEO', '优化'] },
-      { name: 'Pingdom', desc: '网站速度与可用性监测，全球节点测试。', icon: '&#127760;', category: '网络运维', tags: ['监控', '速度', '可用性'] },
-    ];
+    function applyLang() {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 
-    const categoryNames = [...new Set(toolsData.map(t => t.category))];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.textContent = t(el.dataset.i18n);
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        el.setAttribute('aria-label', t(el.dataset.i18nAria));
+      });
 
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    // ---- Category & Tool rendering ----
     const categoryContainer = document.getElementById('categoryFilters');
-    categoryNames.forEach(cat => {
-      const btn = document.createElement('button');
-      btn.className = 'category-btn';
-      btn.dataset.category = cat;
-      btn.setAttribute('role', 'tab');
-      btn.textContent = cat;
-      categoryContainer.appendChild(btn);
-    });
-
     const grid = document.getElementById('toolsGrid');
     const searchInput = document.getElementById('searchInput');
-    const searchStatus = document.getElementById('searchStatus');
-    const sectionTitle = document.getElementById('sectionTitle');
 
     let activeCategory = 'all';
     let searchQuery = '';
 
+    function renderCategories() {
+      const allBtn = categoryContainer.querySelector('[data-category="all"]');
+      allBtn.textContent = t('categoryAll');
+
+      const existing = categoryContainer.querySelectorAll('[data-category]:not([data-category="all"])');
+      existing.forEach(b => b.remove());
+
+      const cats = [...new Set(getToolsData().map(t => t.category))];
+      cats.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'category-btn';
+        btn.dataset.category = cat;
+        btn.setAttribute('role', 'tab');
+        btn.textContent = cat;
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.category-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          activeCategory = btn.dataset.category;
+          filterTools();
+        });
+        categoryContainer.appendChild(btn);
+      });
+
+      categoryContainer.querySelector('[data-category="all"]').classList.add('active');
+      categoryContainer.querySelector('[data-category="all"]').setAttribute('aria-selected', 'true');
+      activeCategory = 'all';
+    }
+
     function filterTools() {
+      const toolsData = getToolsData();
       const filtered = toolsData.filter(tool => {
         const matchCategory = activeCategory === 'all' || tool.category === activeCategory;
         const q = searchQuery.toLowerCase().trim();
@@ -508,45 +600,44 @@
         return matchCategory && matchSearch;
       });
       renderTools(filtered);
-      const visibleCount = filtered.length;
-      const total = toolsData.length;
-      const categoryLabel = activeCategory === 'all' ? '全部工具' : activeCategory;
-      if (searchQuery.trim()) {
-        sectionTitle.textContent = `\`${searchQuery}\` 的搜索结果`;
-        searchStatus.textContent = visibleCount > 0
-          ? `找到 ${visibleCount} 个相关工具`
-          : `没有找到匹配 "${searchQuery}" 的工具`;
-      } else {
-        sectionTitle.textContent = categoryLabel;
-        searchStatus.textContent = '';
-      }
     }
 
     function renderTools(tools) {
       if (tools.length === 0) {
-        grid.innerHTML = '<div class="no-results"><p>没有找到匹配的工具，试试其他关键词吧</p></div>';
+        grid.innerHTML = `<div class="no-results"><p>${t('noResults')}</p></div>`;
         return;
       }
       grid.innerHTML = tools.map(tool => `
-        <a href="#" class="tool-card" target="_blank" rel="noopener">
+        <a href="${tool.url || '#'}" class="tool-card" target="_blank" rel="noopener">
           <div class="tool-icon">${tool.icon}</div>
-          <div class="tool-name">${tool.name}</div>
-          <div class="tool-desc">${tool.desc}</div>
+          <h2 class="tool-name">${tool.name}</h2>
+          <p class="tool-desc">${tool.desc}</p>
           <div class="tool-tags">${tool.tags.map(t => `<span>${t}</span>`).join('')}</div>
         </a>
       `).join('');
     }
 
-    categoryContainer.addEventListener('click', e => {
-      const btn = e.target.closest('.category-btn');
-      if (!btn) return;
+    function setLang(newLang) {
+      lang = newLang;
+      localStorage.setItem(LANG_KEY, newLang);
+      applyLang();
+      renderCategories();
+      filterTools();
+    }
+
+    // ---- Events ----
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+    });
+
+    categoryContainer.querySelector('[data-category="all"]').addEventListener('click', () => {
       document.querySelectorAll('.category-btn').forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      activeCategory = btn.dataset.category;
+      categoryContainer.querySelector('[data-category="all"]').classList.add('active');
+      categoryContainer.querySelector('[data-category="all"]').setAttribute('aria-selected', 'true');
+      activeCategory = 'all';
       filterTools();
     });
 
@@ -554,8 +645,6 @@
       searchQuery = e.target.value;
       filterTools();
     });
-
-    filterTools();
 
     // ---- Back to Top ----
     const backToTop = document.getElementById('backToTop');
@@ -565,6 +654,11 @@
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // ---- Init ----
+    applyLang();
+    renderCategories();
+    filterTools();
   </script>
 </body>
 </html>
